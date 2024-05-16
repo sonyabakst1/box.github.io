@@ -1,0 +1,140 @@
+@font-face {
+  font-family: 'Tex Gyre Condensed';
+  src: url(texgyreheroscn-regular.otf);
+}
+.viewport {
+      overflow-x: hidden; /* Hide horizontal overflow */
+      width: 400%; /* Adjust width as needed */
+      height: 100vh; /* Full viewport height */
+      position: relative;
+    }
+
+    .scroll-container {
+      white-space: nowrap; /* Prevent line breaks */
+      position: absolute;
+      top: 0;
+      left: 0;
+      animation: scrollAnimation 20s linear infinite; /* Adjust duration and timing function */
+    }
+
+    @keyframes scrollAnimation {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-100%); /* Adjust the distance to move */
+      }
+    }
+
+
+
+html {
+  font-size: calc(24px + 0.5vmax);
+  font-family: 'Tex Gyre Condensed', Arial, Helvetica, sans-serif;
+  letter-spacing: 0.02em;
+  line-height: .9;
+	background-color: rgba(248, 245, 241)
+}
+
+#body {
+  height: 100%;
+  width: 100%;
+}
+.section {
+  width: 500%; /* Adjust this value as needed to make the container wider */
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+	display: inline-block;
+	cursor:all-scroll;
+	caret-color: red;
+}
+
+
+
+.border{
+	height: 1080px;
+  width: 1920px;
+	border: 1px red; 
+}
+
+.k{
+	height: 20%; width: auto; position:absolute;
+}
+
+.pictures {
+  width: 220px;
+  height: auto;
+	
+}
+
+.bookend {
+  height: 5%;
+  width: auto;
+  opacity: 0;
+}
+
+.side {
+  height: 50%;
+  width: auto;
+  position: absolute;
+	opacity:0;
+}
+
+/* Existing styles... */
+
+/* Popup Modal Styles */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 10; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+  background-color: #f8f5f1;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 30px;
+  border: 6px solid #00b8f5;
+	border-radius: 20px 20px 20px 20px;
+  width: 50%; /* Could be more or less, depending on screen size */
+	height: 40%; 
+	position: relative; /* Needed for absolute positioning inside */
+}
+
+.close-button {
+  color: white;
+  font-size: 55px; /* Adjust based on your design */
+  font-weight: bold;
+  border-radius: 50%; /* Ensures the shape is a circle */
+  background-color: #eb5f1e; /* Button color */
+  padding: 10px; /* Adjust padding to help center the 'X' */
+  text-align: center;
+  line-height: 27px; /* Helps vertically center the 'X' */
+  display: inline-block; /* Allows width and height to be set */
+  width: 40px; /* Width of the button */
+  height: 40px; /* Height of the button, make it the same as width for a circle */
+  cursor: pointer; /* Pointer cursor on hover */
+  position: absolute; /* Absolute positioning */
+  top: 20px; /* Top position */
+  right: 20px; /* Right position */
+}
+.popuptext{
+	color:black;
+	font-size:29px;
+	padding-left: 15px;
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+#rolling{text-align: center; font-size: 40px; color: rgba(44,172,10,1.00);}
+	
